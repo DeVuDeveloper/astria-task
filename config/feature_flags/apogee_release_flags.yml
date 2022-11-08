@@ -1,0 +1,134 @@
+---
+analytics2_api_access:
+  state: hidden
+  applies_to: RootAccount
+  display_name: New Analytics API Access
+  description: Enables new API endpoints for the course and user data provided by New Analytics.
+datadog_rum_js:
+  state: hidden
+  applies_to: SiteAdmin
+  display_name: Datadog RUM JS Agent
+  description: Include the Datadog RUM JS Agent in the document HEAD.
+missing_policy_applicator_emits_live_events:
+  state: hidden
+  applies_to: RootAccount
+  display_name: Missing Policy Applicator Emits Live Events
+  description:
+    Allows the missing policy applicator to emit submission_updated live events for each submission
+    marked as missing.
+disable_post_to_sis_when_grading_period_closed:
+  state: hidden
+  applies_to: RootAccount
+  display_name: Disable Post to SIS for Assignment in Closed Grading Periods
+  description:
+    If set, turns off post-to-SIS functionality for assignments when their grading period closes.
+    Only applies if the "Enable new SIS integration settings" feature is enabled.
+responsive_student_grades_page:
+  state: hidden
+  applies_to: RootAccount
+  display_name: Responsive Student Grades Page
+  description: Makes the student grades page responsive.
+view_ungraded_as_zero:
+  type: setting
+  state: hidden
+  applies_to: Account
+  display_name: View Ungraded as Zero View in Gradebook
+  description:
+    The Gradebook will factor in ungraded submissions as if they were given a score of zero for
+    calculations. This is just a view for the teacher, and does not affect actual scoring.
+grade_calc_ignore_unposted_anonymous:
+  state: hidden
+  applies_to: RootAccount
+  display_name: Ignore Unposted Anonymous Assignments in Grade Calculation
+  description:
+    If set, the grade calculator will ignore unposted anonymous assignments when calculating
+    totals.
+  environments:
+    ci:
+      state: on # enable for automated testings builds and local testing
+    development:
+      state: on # enable for local development
+    test:
+      state: on # enable for the deployed 'test' environment
+enhanced_gradebook_filters:
+  beta: true
+  state: allowed
+  applies_to: Course
+  root_opt_in: true
+  display_name: Enhanced Gradebook Filters
+  description:
+    wrapper: <a href="https://community.canvaslms.com/t5/Gradebook-Filters/gh-p/Gradebook-Filters">\1</a>
+    enhanced_gradebook_filters_description:
+      This feature provides enhanced filtering options in the Canvas gradebook. When
+      this flag is enabled, early access to ongoing improvements will be displayed
+      automatically with every release. For full details, please see the *Gradebook
+      Filters User Group* in the Canvas Community.
+message_observers_of_students_who:
+  state: hidden
+  applies_to: SiteAdmin
+  display_name: Message Observers of Students Who...
+  description: Enables a redesigned Message Students Who... dialog that allows
+    for messaging observers in addition to students.
+apply_score_to_ungraded:
+  state: hidden
+  applies_to: Account
+  display_name: Apply Score to Ungraded
+  description: Allows instructors to apply scores to ungraded submissions en masse from assignment
+    group and Total column menus in the Gradebook.
+  environments:
+    development:
+      state: allowed
+enhanced_grade_statistics:
+  state: hidden
+  applies_to: SiteAdmin
+  display_name: Show quartiles for grades and use them for box and whiskers
+  description: Updates the student-facing assignment statistics to include quartiles and makes the
+    box-and-whiskers plot a proper box and whiskers plot.
+submission_comment_emojis:
+  state: hidden
+  display_name: Emojis in Submission Comments
+  description: Adds an emoji picker that allows students and teachers to add emojis to
+    their submission comments.
+  applies_to: Course
+  root_opt_in: true
+  environments:
+    ci:
+      state: allowed_on # enable for automated testings builds and local testing
+    development:
+      state: allowed_on # enable for local development
+updated_mastery_connect_icon:
+  state: hidden
+  applies_to: SiteAdmin
+  display_name: Updated Mastery Connect Icon
+  description: If set, displays updated mastery connect icon
+  environments:
+    ci:
+      state: on # enable for automated testings builds and local testing
+    development:
+      state: on # enable for local development
+    test:
+      state: on # enable for the deployed 'test' environment
+visibility_feedback_student_grades_page:
+  state: hidden
+  applies_to: SiteAdmin
+  display_name: Improve Feedback on Students Grade Page
+  description: Students will be able to more easily recognize when
+    feedback has been provided by an instructor/grader ...
+peer_reviews_for_a2:
+  state: hidden
+  applies_to: Course
+  display_name: Peer Review Support in Assignment Enhancements
+  description: Students will be able to provide feedback on another student's assignment submission
+    using the enhanced assignment view
+originality_reports_for_a2:
+  state: hidden
+  applies_to: SiteAdmin
+  display_name: Originality Reports with Assignment Enhancements
+  description: If set, displays originality reports with Assignment Enhancements turned on
+  environments:
+    ci:
+      state: on # enable for automated testings builds and local testing
+    development:
+      state: on # enable for local development
+    test:
+      state: on # enable for the deployed 'test' environment

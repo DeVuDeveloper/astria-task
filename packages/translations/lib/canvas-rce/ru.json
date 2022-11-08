@@ -1,0 +1,10 @@
+{
+  "count_plural_one_item_loaded_other_items_loaded_857023b7": {
+    "message": "{ count, plural,\n    one {}\n    few {}\n   many {}\n  other {}\n}"
+  },
+  "decrease_indent_d9cf469d": { "message": "Уменьшить отступ" },
+  "icon_215a1dc6": { "message": "Значок" },
+  "increase_indent_6af90f7c": { "message": "Увеличить отступ" },
+  "replace_e61834a7": { "message": "Заменить" },
+  "reset_95a81614": { "message": "Сброс" }
+}
