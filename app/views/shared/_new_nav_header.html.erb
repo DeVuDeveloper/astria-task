@@ -84,7 +84,7 @@
       </div>
     <% end %>
     <ul id="menu" class="ic-app-header__menu-list">
-      <% if @current_user %>
+     
         <li class="menu-item ic-app-header__menu-list-item <%= ' ic-app-header__menu-list-item--active' if active_path?('/profile') %>">
           <button id="global_nav_profile_link" class="ic-app-header__menu-list-link">
             <div class="menu-item-icon-container">
@@ -98,7 +98,7 @@
             </div>
           </button>
         </li>
-      <% else %>
+     
         <li class="menu-item ic-app-header__menu-list-item">
           <a id="global_nav_login_link" href="/login" class="ic-app-header__menu-list-link">
             <div class="menu-item-icon-container" aria-hidden="true">
@@ -109,8 +109,8 @@
             </div>
           </a>
         </li>
-      <% end %>
-      <% if @current_user && @current_user.adminable_accounts.present? %>
+      
+     
         <li class="menu-item ic-app-header__menu-list-item <%= ' ic-app-header__menu-list-item--active' if active_path?('/accounts') %>">
           <button id="global_nav_accounts_link" class="ic-app-header__menu-list-link">
             <div class="menu-item-icon-container" aria-hidden="true">
@@ -121,7 +121,7 @@
             </div>
           </button>
         </li>
-      <% end %>
+     
       <li class="ic-app-header__menu-list-item <%= ' ic-app-header__menu-list-item--active' if current_page?(dashboard_url) %>">
         <a id="global_nav_dashboard_link" href="<%= dashboard_url %>" class="ic-app-header__menu-list-link">
           <div class="menu-item-icon-container" aria-hidden="true">
@@ -147,7 +147,9 @@
           <div class="menu-item-icon-container" aria-hidden="true">
            <%= render(partial: "shared/svg/#{'k12/' if k12?}svg_icon_courses_new_styles", formats: [:svg]) %>
           </div>
-          <div class="menu-item__text"><%= courses_title %></div>
+           <div class="menu-item__text">
+              <%= courses_title %>
+            </div>
         </a>
       </li>
 

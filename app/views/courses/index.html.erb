@@ -64,6 +64,20 @@
       <% end %>
     </div>
   </div>
+  <ul class="courses" >
+      <% @courses.each do |course| %>
+        <li>
+          <div class="course-container flex-one">
+          <div class="single-post">  
+            <%= link_to course_path(course.id) do %>
+            <h3 class="post-tittle"><%= course.name%></h3>
+            <% end %>
+           
+          </div>
+          
+          </li>
+      <% end %>
+    </ul>
 
 <% if enrollments_for_index(:current).empty? %>
   <%= t("You are not enrolled in any courses.") %>
