@@ -180,7 +180,9 @@ require "securerandom"
 #         "locale": {
 #           "description": "the course-set locale, if applicable",
 #           "example": "en",
-#           "type": "string"
+#           "type": "string"course.id}", class:"Button" %>
+     
+
 #         },
 #         "enrollments": {
 #           "description": "A list of enrollments linking the current user to the course. for student enrollments, grading information may be included if include[]=total_scores",
@@ -502,6 +504,7 @@ class CoursesController < ApplicationController
   #
   # @returns [Course]
   def index
+    @courses = Course.all
     GuardRail.activate(:secondary) do
       respond_to do |format|
         format.html do
